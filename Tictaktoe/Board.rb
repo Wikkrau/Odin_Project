@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 class Board
-  attr_reader :grid  
+  attr_reader :grid
 
   def initialize
     @grid = Array.new(3) { Array.new(3, ' ') }
@@ -7,8 +9,8 @@ class Board
 
   def display
     @grid.each do |row|
-      puts row.join(" | ")
-      puts "-" * 9
+      puts row.join(' | ')
+      puts '-' * 9
     end
   end
 

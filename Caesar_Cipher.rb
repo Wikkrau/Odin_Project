@@ -1,5 +1,7 @@
-$vocabulary = "abcdefghijklmnopqrstuvwxyz".split("")
-$vocabulary_big = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("")
+# frozen_string_literal: true
+
+$vocabulary = 'abcdefghijklmnopqrstuvwxyz'.split('')
+$vocabulary_big = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('')
 
 def caesar_cipher(word, shift)
   shift = shift.to_i % 26
@@ -13,7 +15,7 @@ def caesar_cipher(word, shift)
     else
       letter
     end
-  end.join("")
+  end.join('')
 end
 
-puts caesar_cipher("What a string!", 5)
+puts caesar_cipher('What a string!', 5)

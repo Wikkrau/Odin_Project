@@ -1,14 +1,15 @@
-class Player
-    def initialize(name, health, damage)
-        @name = name
-        @health = health
-        @damage = damage
-          
-    end 
-    def check_health
-        puts "#{@name} has #{@health} health left."
-    end
+# frozen_string_literal: true
 
+class Player
+  def initialize(name, health, damage)
+    @name = name
+    @health = health
+    @damage = damage
+  end
+
+  def check_health
+    puts "#{@name} has #{@health} health left."
+  end
 end
 
 require 'colorize'
