@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 if 1 < 2
   puts '1 is less than 2'
 else
@@ -20,12 +18,16 @@ end
 
 a = 5
 b = 6
-a.eql?(b) ? puts('5 is equal to 6') : puts('5 is not equal to 6') #=> -1   #=> 0    #=> 1
+a.eql?(b) ? puts('5 is equal to 6') : puts('5 is not equal to 6')
+
+5 <=> 10    #=> -1
+10 <=> 10   #=> 0
+10 <=> 5    #=> 1
 
 puts "Party at Kevin's!" if 1 < 2 && 5 < 6
 
 # This can also be written as
-puts "Party at Kevin's!" if (1 < 2) && (5 < 6)
+puts "Party at Kevin's!" if 1 < 2 and 5 < 6
 
 grade = 'F'
 case grade
