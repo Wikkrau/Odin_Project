@@ -1,4 +1,3 @@
-# code_breaker.rb
 require_relative 'constants'
 include Settings
 
