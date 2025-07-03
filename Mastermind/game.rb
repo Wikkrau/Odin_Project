@@ -47,10 +47,18 @@ class Game
       puts "Feedback: #{feedback.join(' ')}"
       puts "Code is: #{@code.join(' ')}"
 
-      next unless feedback.count('⬛') == SEQ_LENGTH
-
-      puts 'You won!'
-      break
+      # Check if all positions are correct (win condition)
+      if won?(guess)
+        puts 'You won!'
+        break
+      end
     end
+  end
+
+  private
+
+  def won?(guess)
+    # Check if the guess matches the code exactly
+    guess == @code
   end
 end
