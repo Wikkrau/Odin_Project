@@ -21,9 +21,25 @@ class Game
     puts 'Good luck!'
   end
 
+  def countdown(time)
+    time.downto(1) do |seconds|
+      rules
+      puts "Starting in #{seconds} seconds..."
+      sleep(1)
+      system('clear')
+    end
+    puts 'Go!'
+    sleep(1)
+  end
+
   def display_word
     display = @word.chars.map { |char| @guesses.include?(char) ? char : '_' }.join(' ')
     puts "Word: #{display}"
+  end
+
+  def display_guesses
+    puts "Guesses: #{@guesses.join(', ')}"
+    puts "Turns left: #{@turns_left}"
   end
 
   def guess_valid
@@ -54,16 +70,17 @@ class Game
   end
 
   def play
-    rules
-    sleep(4)
-    system('clear')
+    countdown(3)
 
     while @turns_left > 0
+      sleep(0.5)
+      system('clear')
       display_word
+      display_guesses
 
       # Only check for win condition after a valid guess
       if guess_valid && game_won?
-        puts "\nCongratulations! You've guessed the word: #{@word.upcase}"
+        puts "\nCongratulations! You've guessed the word: #{@word.downcase.capitalize}"
         return
       end
 
@@ -72,6 +89,8 @@ class Game
 
     # Game over - player ran out of turns
     puts "\nGame Over! You ran out of turns."
-    puts "The word was: #{@word.upcase}"
+    puts "The word was: #{@word.downcase.capitalize}"
   end
 end
+
+# add puts your own guesses !!!!
