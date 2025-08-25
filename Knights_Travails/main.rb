@@ -72,5 +72,5 @@ def convert_to_chess(path)
 end
 
 start = [0, 0]
-target = [2, 2]
+target = [0, 1]
 knight_moves(start, target)
