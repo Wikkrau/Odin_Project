@@ -35,7 +35,7 @@ Connect4/
 
 1. **Grab the code:**
    ```bash
-   git clone <your-repo-url>
+   git clone https://github.com/Wikkrau/Odin_Project/tree/master/Connect4
    cd Connect4
    ```
 
@@ -124,4 +124,4 @@ This yah project open source under MIT License - use it how yuh want, seen?
 
 ---
 
-**Built with bare love using Ruby and TDD - one love! 🇯🇲**
+**Built with bare love using Ruby and TDD 
