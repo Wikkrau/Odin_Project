@@ -20,6 +20,17 @@ module ChessSettings
     }
   }
 
+  PIECE_SYMBOLS = {
+    'white' => {
+      'pawn' => 'P', 'rook' => 'R', 'knight' => 'N',
+      'bishop' => 'B', 'queen' => 'Q', 'king' => 'K'
+    },
+    'black' => {
+      'pawn' => 'P', 'rook' => 'R', 'knight' => 'N',
+      'bishop' => 'B', 'queen' => 'Q', 'king' => 'K'
+    }
+  }
+
   PIECE_VALUES = {
     'pawn' => 1,
     'knight' => 3,
@@ -27,16 +38,5 @@ module ChessSettings
     'rook' => 5,
     'queen' => 9,
     'king' => 100
-  }
-
-  PIECE_SYMBOLS = {
-    'white' => {
-      'pawn' => '♙', 'rook' => '♖', 'knight' => '♘',
-      'bishop' => '♗', 'queen' => '♕', 'king' => '♔'
-    },
-    'black' => {
-      'pawn' => '♟', 'rook' => '♜', 'knight' => '♞',
-      'bishop' => '♝', 'queen' => '♛', 'king' => '♚'
-    }
   }
 end

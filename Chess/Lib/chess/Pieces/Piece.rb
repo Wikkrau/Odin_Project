@@ -31,8 +31,15 @@ class Piece
     other_piece && other_piece.color == @color
   end
 
+  # Colored symbols for terminal display
   def symbol
-    PIECE_SYMBOLS[@color][self.class.name.downcase]
+    piece_char = PIECE_SYMBOLS[@color][self.class.name.downcase]
+
+    if @color == 'white'
+      "\e[97m#{piece_char}\e[0m"  # Bright white text
+    else
+      "\e[91m#{piece_char}\e[0m"  # Bright red text for black pieces
+    end
   end
 
   def value
@@ -41,7 +48,6 @@ class Piece
 
   protected
 
-  # Only this class and subclasses can use this method
   def valid_position?(row, col)
     row.between?(0, BOARD_SIZE - 1) && col.between?(0, BOARD_SIZE - 1)
   end
