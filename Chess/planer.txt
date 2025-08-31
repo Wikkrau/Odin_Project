@@ -1,0 +1,56 @@
+Components of Chess:
+  - 8x8 board (64 squares)
+  - 32 pieces (black/white):
+    - 16 pieces per player:
+      - 8 pawns
+      - 2 knights
+      - 2 bishops
+      - 2 rooks
+      - 1 queen
+      - 1 knight
+  - 2 players
+  - Save feature
+  - Resign feature
+  - Draw feature
+
+Classes to make:
+  - Board
+  - Player
+  - Piece
+    - King
+    - Queen
+    - Rooks
+    - Bishops
+    - Knights
+    - Pawns
+  - Game
+    -Moves
+    -Advanced_moves
+    -Game_logic
+
+
+structure some thing like this 
+Chess/
+├── main.rb
+├── readme.md
+├── Lib/
+│   ├── Constants.rb
+│   ├── Board.rb
+│   ├── Game.rb
+│   ├── player.rb
+│   ├── SaveLoad.rb
+│   ├── MoveValidator.rb
+│   └── chess/
+│       └── Pieces/
+│           ├── Piece.rb (parent class)
+│           ├── Pawn.rb
+│           ├── Rook.rb
+│           ├── Knight.rb
+│           ├── Bishop.rb
+│           ├── Queen.rb
+│           └── King.rb
+└── spec/
+    ├── spec_helper.rb
+    ├── spec_board.rb
+    ├── spec_game.rb
+    └── spec_pieces.rb
