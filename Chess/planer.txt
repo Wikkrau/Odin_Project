@@ -31,26 +31,25 @@ Classes to make:
 
 structure some thing like this 
 Chess/
-├── main.rb
-├── readme.md
-├── Lib/
-│   ├── Constants.rb
-│   ├── Board.rb
-│   ├── Game.rb
-│   ├── player.rb
-│   ├── SaveLoad.rb
-│   ├── MoveValidator.rb
+├── main.rb                 # Entry point - starts the game
+├── planer.txt             # That thing 
+├── readme.md              # Project documentation
+├── .rspec                 # RSpec configuration for testing
+├── Lib/                   # Main code directory
+│   ├── constants.rb       # Game constants (board size, piece values, etc.)
+│   ├── Board.rb           # Chess board class
+│   ├── Game.rb            # Main game logic class
+│   ├── player.rb          # Player class
+│   ├── MoveValidator.rb   # Move validation logic
+│   ├── SaveLoad.rb        # Save/load game functionality
 │   └── chess/
-│       └── Pieces/
-│           ├── Piece.rb (parent class)
-│           ├── Pawn.rb
-│           ├── Rook.rb
-│           ├── Knight.rb
-│           ├── Bishop.rb
-│           ├── Queen.rb
-│           └── King.rb
-└── spec/
-    ├── spec_helper.rb
-    ├── spec_board.rb
-    ├── spec_game.rb
-    └── spec_pieces.rb
+│       └── Pieces/        # All chess piece classes
+│           ├── Piece.rb   # Parent class for all pieces
+│           ├── Pawn.rb    # Pawn piece
+│           ├── Rook.rb    # Rook piece
+│           ├── Knight.rb  # Knight piece
+│           ├── Bishop.rb  # Bishop piece
+│           ├── Queen.rb   # Queen piece
+│           └── King.rb    # King piece
+└── spec/                  # Test files
+    └── spec_helper.rb     # RSpec test configuration

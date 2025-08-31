@@ -1,4 +1,4 @@
-require_relative 'Constants'
+require_relative 'constants'
 require_relative 'chess/Pieces/Piece'
 require_relative 'chess/Pieces/Pawn'
 require_relative 'chess/Pieces/Rook'
@@ -35,7 +35,7 @@ class Board
   end
 
   def display
-    puts '  a b c d e f g h'
+    puts "\n  a b c d e f g h"
     (BOARD_SIZE - 1).downto(0) do |row|
       print "#{row + 1} "
       (0...BOARD_SIZE).each do |col|
@@ -45,56 +45,7 @@ class Board
       end
       puts " #{row + 1}"
     end
-    puts '  a b c d e f g h'
-  end
-
-  # Clear all pieces from board (for loading saved games)
-  def clear_board
-    @grid = Array.new(BOARD_SIZE) { Array.new(BOARD_SIZE, nil) }
-  end
-
-  # Place a piece at specific position (for loading saved games)
-  def place_piece(piece, position)
-    row, col = position
-    @grid[row][col] = piece
-    piece.position = position
-  end
-
-  # Find specific piece type on board
-  def find_piece(color, piece_type)
-    @grid.flatten.compact.find do |piece|
-      piece.color == color && piece.class.name.downcase == piece_type
-    end
-  end
-
-  # Get all pieces of a specific color
-  def pieces_by_color(color)
-    @grid.flatten.compact.select { |piece| piece.color == color }
-  end
-
-  # Check if position is under attack by enemy pieces
-  def position_under_attack?(position, attacking_color)
-    pieces_by_color(attacking_color).any? do |piece|
-      piece.possible_moves(self).include?(position)
-    end
-  end
-
-  # Create deep copy of board (for move validation without affecting real board)
-  def deep_copy
-    new_board = Board.new
-    new_board.clear_board
-
-    @grid.each_with_index do |row, row_index|
-      row.each_with_index do |piece, col_index|
-        next unless piece
-
-        new_piece = piece.class.new(piece.color, [row_index, col_index])
-        new_piece.instance_variable_set(:@has_moved, piece.has_moved)
-        new_board.place_piece(new_piece, [row_index, col_index])
-      end
-    end
-
-    new_board
+    puts "  a b c d e f g h\n"
   end
 
   private

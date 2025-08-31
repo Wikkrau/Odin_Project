@@ -1,5 +1,6 @@
 module ChessSettings
   BOARD_SIZE = 8
+
   STARTING_POSITIONS = {
     'white' => {
       'rook' => [[0, 0], [0, 7]],
@@ -26,5 +27,16 @@ module ChessSettings
     'rook' => 5,
     'queen' => 9,
     'king' => 100
+  }
+
+  PIECE_SYMBOLS = {
+    'white' => {
+      'pawn' => '♙', 'rook' => '♖', 'knight' => '♘',
+      'bishop' => '♗', 'queen' => '♕', 'king' => '♔'
+    },
+    'black' => {
+      'pawn' => '♟', 'rook' => '♜', 'knight' => '♞',
+      'bishop' => '♝', 'queen' => '♛', 'king' => '♚'
+    }
   }
 end

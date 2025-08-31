@@ -1,9 +1,9 @@
-require_relative '../Constants'
+require_relative '../../constants'
 
 class Piece
   include ChessSettings
 
-  attr_reader :color, :position, :has_moved
+  attr_reader :color, :has_moved
   attr_accessor :position
 
   def initialize(color, position)
@@ -12,12 +12,12 @@ class Piece
     @has_moved = false
   end
 
-  # Abstract method - each piece implements its own moves
+  # Each piece must implement this method (abstract method)
   def possible_moves(board)
-    raise NotImplementedError, 'Subclass must implement possible_moves'
+    raise NotImplementedError, "#{self.class} must implement possible_moves method"
   end
 
-  # Common methods all pieces share
+  # Common methods all pieces can use
   def move_to(new_position)
     @position = new_position
     @has_moved = true
@@ -32,7 +32,7 @@ class Piece
   end
 
   def symbol
-    raise NotImplementedError, 'Subclass must implement symbol'
+    PIECE_SYMBOLS[@color][self.class.name.downcase]
   end
 
   def value
@@ -41,6 +41,7 @@ class Piece
 
   protected
 
+  # Only this class and subclasses can use this method
   def valid_position?(row, col)
     row.between?(0, BOARD_SIZE - 1) && col.between?(0, BOARD_SIZE - 1)
   end
