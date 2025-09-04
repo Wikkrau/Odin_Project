@@ -1,0 +1,7 @@
+require_relative 'chess/Pieces/Piece'
+require_relative 'chess/Pieces/Pawn'
+require_relative 'chess/Pieces/Rook'
+require_relative 'chess/Pieces/Knight'
+require_relative 'chess/Pieces/Bishop'
+require_relative 'chess/Pieces/Queen'
+require_relative 'chess/Pieces/King'
