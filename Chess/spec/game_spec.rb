@@ -1,4 +1,11 @@
 require_relative 'spec_helper'
+require_relative '../Lib/constants'
+require_relative '../Lib/pieces_loader'
+require_relative '../Lib/Board'
+require_relative '../Lib/player'
+require_relative '../Lib/CheckSystem'
+require_relative '../Lib/DisplayHelpers'
+require_relative '../Lib/Game'
 
 RSpec.describe Game do
   let(:game) { Game.new }

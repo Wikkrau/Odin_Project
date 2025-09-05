@@ -1,4 +1,7 @@
 require_relative 'spec_helper'
+require_relative '../Lib/constants'
+require_relative '../Lib/pieces_loader'
+require_relative '../Lib/Board'
 
 RSpec.describe Rook do
   let(:board) { Board.new }
