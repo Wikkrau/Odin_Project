@@ -33,13 +33,13 @@ structure some thing like this
 Chess/
 ├── main.rb                 # Entry point - starts the game
 ├── planer.txt             # That thing 
-├── readme.md              # Project documentation
-├── .rspec                 # RSpec configuration for testing
-├── Lib/                   # Main code directory
+├── readme.md              # readme pls
+├── .rspec                 # RSpec 
+├── Lib/                   # Main code 
 │   ├── constants.rb       # Game constants (board size, piece values, etc.)
-│   ├── Board.rb           # Chess board class
-│   ├── Game.rb            # Main game logic class
-│   ├── player.rb          # Player class
+│   ├── Board.rb           # Chess board
+│   ├── Game.rb            # Main game logic
+│   ├── player.rb          # Player 
 │   ├── MoveValidator.rb   # Move validation logic
 │   ├── SaveLoad.rb        # Save/load game functionality
 │   └── chess/

@@ -12,15 +12,12 @@ class Piece
     @has_moved = false
   end
 
-<<<<<<< HEAD
-=======
   # Each piece must implement this method (abstract method)
   def possible_moves(board)
     raise NotImplementedError, "#{self.class} must implement possible_moves method"
   end
 
   # Common methods all pieces can use
->>>>>>> 4f8d67cc21064a469b2fb7e363ee3a2481edb632
   def move_to(new_position)
     @position = new_position
     @has_moved = true
