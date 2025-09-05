@@ -24,11 +24,15 @@ class Piece
   end
 
   def enemy?(other_piece)
-    other_piece && other_piece.color != @color
+    return false if other_piece.nil?  # Add this line
+
+    @color != other_piece.color
   end
 
   def ally?(other_piece)
-    other_piece && other_piece.color == @color
+    return false if other_piece.nil?  # Add this line
+
+    @color == other_piece.color
   end
 
   # Colored symbols for terminal display
