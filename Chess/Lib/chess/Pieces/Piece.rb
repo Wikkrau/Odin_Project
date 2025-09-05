@@ -34,21 +34,14 @@ class Piece
     other_piece && other_piece.color == @color
   end
 
-<<<<<<< HEAD
-=======
   # Colored symbols for terminal display
->>>>>>> 4f8d67cc21064a469b2fb7e363ee3a2481edb632
   def symbol
     piece_char = PIECE_SYMBOLS[@color][self.class.name.downcase]
 
     if @color == 'white'
       "\e[97m#{piece_char}\e[0m"  # Bright white text
     else
-<<<<<<< HEAD
-      "\e[91m#{piece_char}\e[0m"  # Bright red text
-=======
       "\e[91m#{piece_char}\e[0m"  # Bright red text for black pieces
->>>>>>> 4f8d67cc21064a469b2fb7e363ee3a2481edb632
     end
   end
 
@@ -56,13 +49,6 @@ class Piece
     PIECE_VALUES[self.class.name.downcase]
   end
 
-<<<<<<< HEAD
-  def possible_moves(board)
-    raise NotImplementedError, "#{self.class} must implement possible_moves method"
-  end
-
-=======
->>>>>>> 4f8d67cc21064a469b2fb7e363ee3a2481edb632
   protected
 
   def valid_position?(row, col)
