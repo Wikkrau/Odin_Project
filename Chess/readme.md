@@ -169,15 +169,6 @@ rspec --pattern "*_spec.rb"
 
 ## 🛠️ Development
 
-### Contributing
-1. Fork the repository
-2. Create feature branch (`git checkout -b feature/amazing-feature`)
-3. Write tests for new functionality
-4. Ensure all tests pass (`rspec`)
-5. Commit changes (`git commit -m 'Add amazing feature'`)
-6. Push to branch (`git push origin feature/amazing-feature`)
-7. Open Pull Request
-
 ### Code Standards
 - **RuboCop compliant** code style
 - **100% test coverage** for new features
@@ -190,7 +181,6 @@ rspec --pattern "*_spec.rb"
 - **Test Framework**: RSpec 3.13
 - **Architecture**: Object-Oriented Design
 - **Lines of Code**: ~1,500
-- **Test Coverage**: 97% (61/63 tests passing)
 - **Performance**: Instant move validation
 - **Memory**: Lightweight (~2MB runtime)
 
@@ -210,15 +200,6 @@ rspec --pattern "*_spec.rb"
 - **Professional code structure** with clear separation
 - **Comprehensive error handling** for invalid moves
 - **Scalable design** ready for future enhancements
-
-## 📧 Contact
-
-**Developer**: [Your Name]  
-**Email**: [Your Email]  
-**GitHub**: [Your GitHub]  
-**Project**: Ruby Chess Implementation
-
----
 
 *Built with ♥️ using Ruby and RSpec*
 
