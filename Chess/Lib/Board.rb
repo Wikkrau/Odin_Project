@@ -1,5 +1,15 @@
 require_relative 'constants'
+<<<<<<< HEAD
 require_relative 'pieces_loader'
+=======
+require_relative 'chess/Pieces/Piece'
+require_relative 'chess/Pieces/Pawn'
+require_relative 'chess/Pieces/Rook'
+require_relative 'chess/Pieces/Knight'
+require_relative 'chess/Pieces/Bishop'
+require_relative 'chess/Pieces/Queen'
+require_relative 'chess/Pieces/King'
+>>>>>>> 4f8d67cc21064a469b2fb7e363ee3a2481edb632
 
 class Board
   include ChessSettings
@@ -7,11 +17,18 @@ class Board
   attr_reader :grid
 
   def initialize
+<<<<<<< HEAD
     @grid = create_empty_grid
     setup_starting_pieces
   end
 
   # Get piece at specific position
+=======
+    @grid = Array.new(BOARD_SIZE) { Array.new(BOARD_SIZE, nil) }
+    setup_pieces
+  end
+
+>>>>>>> 4f8d67cc21064a469b2fb7e363ee3a2481edb632
   def piece_at(position)
     row, col = position
     return nil unless valid_position?(row, col)
@@ -19,6 +36,7 @@ class Board
     @grid[row][col]
   end
 
+<<<<<<< HEAD
   # Move piece from one position to another
   def move_piece(from_pos, to_pos)
     piece = piece_at(from_pos)
@@ -36,6 +54,18 @@ class Board
   end
 
   # Display board in terminal
+=======
+  def move_piece(from, to)
+    piece = piece_at(from)
+    return false unless piece
+
+    @grid[to[0]][to[1]] = piece
+    @grid[from[0]][from[1]] = nil
+    piece.move_to(to)
+    true
+  end
+
+>>>>>>> 4f8d67cc21064a469b2fb7e363ee3a2481edb632
   def display
     puts "\n  a b c d e f g h"
     (BOARD_SIZE - 1).downto(0) do |row|
@@ -50,6 +80,7 @@ class Board
     puts "  a b c d e f g h\n"
   end
 
+<<<<<<< HEAD
   # Create deep copy for move simulation
   def deep_copy
     new_board = Board.new
@@ -105,6 +136,11 @@ class Board
   end
 
   def setup_starting_pieces
+=======
+  private
+
+  def setup_pieces
+>>>>>>> 4f8d67cc21064a469b2fb7e363ee3a2481edb632
     STARTING_POSITIONS.each do |color, pieces|
       pieces.each do |piece_type, positions|
         positions.each do |pos|
@@ -126,6 +162,7 @@ class Board
     end
   end
 
+<<<<<<< HEAD
   def create_piece_copy(original)
     new_piece = create_piece(
       original.class.name.downcase,
@@ -137,6 +174,8 @@ class Board
     new_piece
   end
 
+=======
+>>>>>>> 4f8d67cc21064a469b2fb7e363ee3a2481edb632
   def valid_position?(row, col)
     row.between?(0, BOARD_SIZE - 1) && col.between?(0, BOARD_SIZE - 1)
   end

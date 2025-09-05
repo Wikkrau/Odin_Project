@@ -1,7 +1,10 @@
 module ChessSettings
   BOARD_SIZE = 8
 
+<<<<<<< HEAD
   # Starting positions for all pieces
+=======
+>>>>>>> 4f8d67cc21064a469b2fb7e363ee3a2481edb632
   STARTING_POSITIONS = {
     'white' => {
       'rook' => [[0, 0], [0, 7]],
@@ -21,7 +24,21 @@ module ChessSettings
     }
   }
 
+<<<<<<< HEAD
   # Piece values for AI evaluation
+=======
+  PIECE_SYMBOLS = {
+    'white' => {
+      'pawn' => 'P', 'rook' => 'R', 'knight' => 'N',
+      'bishop' => 'B', 'queen' => 'Q', 'king' => 'K'
+    },
+    'black' => {
+      'pawn' => 'P', 'rook' => 'R', 'knight' => 'N',
+      'bishop' => 'B', 'queen' => 'Q', 'king' => 'K'
+    }
+  }
+
+>>>>>>> 4f8d67cc21064a469b2fb7e363ee3a2481edb632
   PIECE_VALUES = {
     'pawn' => 1,
     'knight' => 3,
@@ -30,6 +47,7 @@ module ChessSettings
     'queen' => 9,
     'king' => 100
   }
+<<<<<<< HEAD
 
   # Unicode symbols for terminal display
   PIECE_SYMBOLS = {
@@ -42,4 +60,6 @@ module ChessSettings
       'bishop' => 'b', 'queen' => 'q', 'king' => 'k'
     }
   }
+=======
+>>>>>>> 4f8d67cc21064a469b2fb7e363ee3a2481edb632
 end

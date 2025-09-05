@@ -1,6 +1,7 @@
 require_relative 'Board'
 require_relative 'player'
 require_relative 'constants'
+<<<<<<< HEAD
 require_relative 'CheckSystem'
 require_relative 'DisplayHelpers'
 
@@ -10,6 +11,11 @@ class Game
   include DisplayHelpers
 
   attr_reader :board, :current_player, :game_over
+=======
+
+class Game
+  include ChessSettings
+>>>>>>> 4f8d67cc21064a469b2fb7e363ee3a2481edb632
 
   def initialize
     @board = Board.new
@@ -17,6 +23,7 @@ class Game
     @player2 = Player.new('Player 2', 'black')
     @current_player = @player1
     @game_over = false
+<<<<<<< HEAD
     @selected_piece = nil
     @selected_position = nil
   end
@@ -336,5 +343,27 @@ class Game
       moves << to_pos if move_escapes_check?(from_pos, to_pos)
     end
     moves
+=======
+  end
+
+  def play
+    puts 'Welcome to Chess!'
+    puts "Enter moves like 'e2 e4' or type 'quit' to exit"
+
+    until @game_over
+      @board.display
+      puts "#{@current_player.name}'s turn (#{@current_player.color})"
+
+      input = gets.chomp.downcase
+      case input
+      when 'quit'
+        @game_over = true
+        puts 'Thanks for playing!'
+      else
+        puts 'Move processing not implemented yet'
+        # TODO: implement move processing
+      end
+    end
+>>>>>>> 4f8d67cc21064a469b2fb7e363ee3a2481edb632
   end
 end
