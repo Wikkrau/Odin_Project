@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Panel</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Style.css">
+    <title>Document</title>
+</head>
+<!--
+        Step 2: Layout
+        Start by writing out the HTML elements for the sidebar, header and main-content containers.
+        In your CSS file, apply Grid properties until you have this basic layout built.
+        Step 3: Nesting
+        Taking it one section at a time, begin nesting child elements under the parent elements in the HTML. Remember that you can keep making grid containers within grid containers.
+        In the sidebar, use more grids to lay out the navigation and branding sections.
+        In the header, use more grids to lay out the search bar, user info and buttons.
+        For the main-content, use more grids to lay out the projects, announcements and trending items.
+        Fill out some dummy content and placeholder images so you can position all of your grid items.
+        Step 4: Gather assets
+        Once you have your grid layout complete you can either recreate the dashboard example above or style your own design.
+        All of the icons and more can be downloaded as SVGs from Material Design Icons.
+        Choose your own fonts! The design example uses Roboto, which is available with Google fonts. (You may want to review the More Text Styles Lesson for information about how to include external fonts in your projects).
+        Step 5: Some tips!
+        When building the layout, apply background colors or borders to your containers to help you visualize your grid.
+        It’s up to you whether to use pixels, fr units or both for your grid tracks.
+        This project does not have to be responsive, but if you’d like to you can expand or shrink the project cards section when resizing the browser window.
+        You don’t have to make a pixel perfect match with the design example. Consider this an opportunity to practice your CSS skills with your own designs.
+        Don’t forget to push your finished dashboard to GitHub. Use GitHub Pages to publish it to the world!
+        Step 6: Section feedback
+        Before you move on, we would love it if you could submit your feedback on the Intermediate HTML and CSS course. -->
+<body>
+    <aside>
+        <h1><img src="imgs/view-dashboard.svg" id="Topicon" class='white' alt="4Sqr ">Dashboard</h1>
+        <div><img src="imgs/home.svg" alt="home" class="white"> Home</div>
+        <div><img src="imgs/card-account-details-outline.svg" class="white" alt="user"> Profile</div>
+        <div><img src="imgs/message-reply.svg" class="white" alt="message"> Messages</div>
+        <div><img src="imgs/clock-time-three.svg" class="white" alt="history"> History</div>
+        <div><img src="imgs/cog.svg" class="white" alt="task"> Tasks</div>
+        <div><img src="imgs/account-group.svg" class="white" alt="community"> Communities</div>
+        <br>
+        <div><img src="imgs/cog.svg" class="white" alt="settings"> Settings</div>
+        <div><img src="imgs/help-box.svg" class="white" alt="support"> Support</div>
+        <div><img src="imgs/shield-check.svg" class="white" alt="privacy"> Privacy</div>
+    </aside>
+    <div class="right">
+    <header>
+        <div class="header-top">
+            <div class="search-section">
+                <img class="search-icon" src="imgs/magnify.svg">
+                <input type="search" name="search" placeholder="Search...">
+            </div>
+            <div class="user-actions">
+                <img class="notification-icon" src="imgs/bell-ring-outline.svg">
+                <img src="imgs/fox.png" alt="Profile" class="profile-pic-small circlelate">
+                <span class="username">WikKrau</span>
+            </div>
+        </div>
+        <div class="header-bottom">
+            <div class="greeting-section">
+                <img src="imgs/fox.png" alt="Profile" class="profile-pic-big circlelate">
+                <div class="greeting-text">
+                    <p class="greeting">Hi there,</p>
+                    <h2 class="user-full-name">WikKrau (@wikkrau)</h2>
+                </div>
+            </div>
+            <div class="action-buttons">
+                <button class="btn btn-new">New</button>
+                <button class="btn btn-upload">Upload</button>
+                <button class="btn btn-share">Share</button>
+            </div>
+        </div>
+    </header>
+    <main>
+
+        <div class="projects">
+            <h2>Your Projects</h2>
+            <div class="projects-grid">
+                <div>
+                    <h3>Project 1</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <div><img src="imgs/star-plus-outline.svg" alt="AddFavorite"><img src="imgs/eye-plus-outline.svg" alt="Track"><img src="imgs/source-fork.svg" alt="MediaShare"></div>
+                </div>
+                <div>
+                    <h3>Project 2</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <div><img src="imgs/star-plus-outline.svg" alt="AddFavorite"><img src="imgs/eye-plus-outline.svg" alt="Track"><img src="imgs/source-fork.svg" alt="MediaShare"></div>
+                </div>
+                <div>
+                    <h3>Project 3</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <div><img src="imgs/star-plus-outline.svg" alt="AddFavorite"><img src="imgs/eye-plus-outline.svg" alt="Track"><img src="imgs/source-fork.svg" alt="MediaShare"></div>
+                </div>
+                <div>
+                    <h3>Project 4</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <div><img src="imgs/star-plus-outline.svg" alt="AddFavorite"><img src="imgs/eye-plus-outline.svg" alt="Track"><img src="imgs/source-fork.svg" alt="MediaShare"></div>
+                </div>
+                <div>
+                    <h3>Project 5</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <div><img src="imgs/star-plus-outline.svg" alt="AddFavorite"><img src="imgs/eye-plus-outline.svg" alt="Track"><img src="imgs/source-fork.svg" alt="MediaShare"></div>
+                </div>
+                <div>
+                    <h3>Project 6</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <div><img src="imgs/star-plus-outline.svg" alt="AddFavorite"><img src="imgs/eye-plus-outline.svg" alt="Track"><img src="imgs/source-fork.svg" alt="MediaShare"></div>
+                </div>
+            </div>
+        </div>
+        <div class="sidethings">
+            <div class="announcements">
+                <h2>Announcements</h2>
+                <div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel purus euismod, dictum erat at, tincidunt nunc.</p>
+                <p>Phasellus non felis nec erat facilisis gravida. Sed euismod, nisl vel tincidunt lacinia, nunc urna fermentum nunc, a facilisis libero justo a odio.</p>
+                </div>
+            </div>
+            <div class="trending">
+                <h2>Trending</h2>
+                <div>
+                    <div><img src="imgs/p1.png" class="circlelate profile-pic-small" alt="person1" ><h4>@example1</h4><span>Greatest Developer</span></div>
+                    <div><img src="imgs/p2.png" class="circlelate profile-pic-small" alt="person2" ><h4>@example2</h4><span>Greatest Programmer</span></div>
+                    <div><img src="imgs/p3.png" class="circlelate profile-pic-small" alt="person3" ><h4>@example3</h4><span>Greatest Man</span></div>
+                    <div><img src="imgs/p4.png" class="circlelate profile-pic-small" alt="person4" ><h4>@example4</h4><span>Greatest Speaker</span></div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+    </div>
+</body>
+</html>
